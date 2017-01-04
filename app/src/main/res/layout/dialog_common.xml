@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/grid_50"
+              android:background="@color/app_main_bg"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:padding="@dimen/grid_20">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="退出应用"
+        android:textColor="@color/text_color_tv1"
+        android:textSize="@dimen/grid_16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grid_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="@dimen/grid_90"
+            android:layout_height="@dimen/grid_35"
+            android:gravity="center"
+            android:padding="@dimen/grid_5"
+            android:text="确定"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/grid_16"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="@dimen/grid_30"
+            android:background="@color/text_color_tv3"/>
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/grid_90"
+            android:layout_height="@dimen/grid_35"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/grid_16"/>
+    </LinearLayout>
+
+</LinearLayout>

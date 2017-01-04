@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_main_bg"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imgae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_conow_error"/>
+
+    <TextView
+        android:id="@+id/errorcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="网络连接异常"
+        android:textColor="@color/text_color_tv3"
+        android:textSize="@dimen/grid_14"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        android:text="重新加载"
+        android:textColor="@color/text_color_tv3"
+        android:textSize="@dimen/grid_15"/>
+</LinearLayout>

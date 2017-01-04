@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_45"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/grid_45"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back1"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="请输入食谱或食材"
+            android:paddingLeft="@dimen/grid_5"
+            android:paddingRight="@dimen/grid_5"
+            android:singleLine="true"
+            android:textColor="@color/text_color_tv0"
+            android:textColorHint="@color/text_color_tv3"
+            android:textSize="@dimen/grid_16"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/grid_45"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/search_icon"/>
+    </RelativeLayout>
+
+    <ping.Lib.widgets.recyclerrefreshlayout.LoadOrRefreshView
+        android:id="@+id/refresh_layout"
+        android:layout_below="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:id="@+id/layoutLoading"
+        layout="@layout/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/layoutError"
+        layout="@layout/layout_error_unload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/layoutEmpty"
+        layout="@layout/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:visibility="gone"/>
+</RelativeLayout>

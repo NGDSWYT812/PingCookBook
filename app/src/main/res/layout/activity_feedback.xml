@@ -1,0 +1,79 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_45"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/grid_45"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back1"/>
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="用户反馈"
+            android:textColor="@color/text_color_tv0"
+            android:textSize="@dimen/grid_18"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editFeedBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_170"
+        android:layout_below="@+id/rl_top"
+        android:layout_margin="@dimen/grid_10"
+        android:background="@drawable/corner_gray"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="欢迎亲们尽情的吐槽！"
+        android:padding="@dimen/grid_10"
+        android:textColor="@color/text_color_tv1"
+        android:textColorHint="@color/text_color_tv2"
+        android:textSize="@dimen/grid_14">
+    </EditText>
+
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="@dimen/grid_150"
+        android:layout_height="@dimen/grid_35"
+        android:layout_below="@+id/editFeedBack"
+        android:layout_marginLeft="@dimen/grid_10"
+        android:layout_marginRight="@dimen/grid_10"
+        android:background="@drawable/corner_gray"
+        android:ems="11"
+        android:hint="请输入您的电话"
+        android:inputType="phone"
+        android:paddingLeft="@dimen/grid_8"
+        android:paddingRight="@dimen/grid_8"
+        android:textColor="@color/text_color_tv1"
+        android:textColorHint="@color/text_color_tv2"
+        android:textSize="@dimen/grid_14">
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_40"
+        android:layout_below="@+id/editPhone"
+        android:layout_marginLeft="@dimen/grid_10"
+        android:layout_marginRight="@dimen/grid_10"
+        android:layout_marginTop="@dimen/grid_20"
+        android:background="@drawable/bg_selector_orange"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/grid_17"/>
+</RelativeLayout>

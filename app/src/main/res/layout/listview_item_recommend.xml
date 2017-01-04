@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/grid_5">
+
+    <FrameLayout
+        android:id="@+id/pic1Layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_50"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/grid_5"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grid_200"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_default"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/grid_50"
+            android:layout_alignBottom="@+id/iv_image"
+            android:background="#55000000"/>
+
+        <TextView
+            android:id="@+id/tv_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_image"
+            android:layout_marginBottom="@dimen/grid_5"
+            android:layout_marginLeft="@dimen/grid_10"
+            android:layout_marginRight="@dimen/grid_10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="New Text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/grid_15"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/view"
+            android:layout_marginLeft="@dimen/grid_10"
+            android:layout_marginRight="@dimen/grid_10"
+            android:layout_marginTop="@dimen/grid_3"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="New Text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/grid_16"/>
+    </RelativeLayout>
+</LinearLayout>

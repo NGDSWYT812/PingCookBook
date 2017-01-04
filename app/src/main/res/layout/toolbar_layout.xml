@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mainColor"
+    android:orientation="vertical"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_45"
+
+        >
+
+        <ping.Lib.layout.RippleView
+            android:id="@+id/rv_tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/grid_15"
+            app:rv_type="doubleRipple">
+
+            <TextView
+                android:id="@+id/tv_left_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/grid_40"
+                android:text="返回"
+                android:textColor="@color/text_color_tv1"
+                android:textSize="@dimen/grid_13"
+                android:visibility="gone" />
+        </ping.Lib.layout.RippleView>
+
+        <ping.Lib.layout.RippleView
+            android:id="@+id/rv_iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rv_type="doubleRipple">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="@dimen/grid_50">
+
+                <ImageView
+                    android:id="@+id/iv_left_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/grid_18"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/grid_2"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_back"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </ping.Lib.layout.RippleView>
+
+        <ping.Lib.layout.RippleView
+            android:id="@+id/rv_iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:rv_type="doubleRipple">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="@dimen/grid_50"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_right_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/grid_18"
+                    android:layout_gravity="center"
+                    android:paddingRight="@dimen/grid_2"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_add"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </ping.Lib.layout.RippleView>
+
+        <ping.Lib.layout.RippleView
+            android:id="@+id/rv_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:rv_type="doubleRipple">
+
+            <TextView
+                android:id="@+id/tv_title_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="标题"
+                android:textColor="@color/white"
+                android:textSize="@dimen/grid_18"
+                android:visibility="gone" />
+        </ping.Lib.layout.RippleView>
+
+        <ping.Lib.layout.RippleView
+            android:id="@+id/rv_tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            app:rv_type="doubleRipple">
+
+            <TextView
+                android:paddingRight="@dimen/grid_15"
+                android:id="@+id/tv_right_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:minWidth="@dimen/grid_40"
+                android:text="提交"
+                android:textColor="@color/text_color_tv1"
+                android:textSize="@dimen/grid_15"
+                android:visibility="gone" />
+        </ping.Lib.layout.RippleView>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/app_main_bg" />
+</LinearLayout>

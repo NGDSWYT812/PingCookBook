@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mainColor">#F17420</color>
+    <color name="app_main_bg">#F0F0F0</color>
+    <color name="text_color_tv0">#472709</color>
+    <color name="text_color_tv1">#666666</color>
+    <color name="text_color_tv2">#999999</color>
+    <color name="text_color_tv3">#b2b4bc</color>
+    <color name="text_color_marn">#eb4f38</color>
+    <color name="devide_line">#cccccc</color>
+    <color name="item_selecter">#e6e6e6</color>
+    <color name="green">#07D163</color>
+    <color name="grey">#808080</color>
+</resources>

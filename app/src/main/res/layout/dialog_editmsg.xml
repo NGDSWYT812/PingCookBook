@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/grid_20"
+              android:background="@drawable/corner_gray"
+              android:clickable="true"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_40"
+        android:gravity="center"
+        android:text="用户修改"
+        android:textColor="@color/text_color_tv0"
+        android:textSize="@dimen/grid_16"/>
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_40"
+        android:layout_margin="@dimen/grid_20"
+        android:background="@drawable/corner_gray"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="请输入昵称"
+        android:maxLength="15"
+        android:paddingLeft="10dp"
+        android:paddingRight="@dimen/grid_10"
+        android:singleLine="true"
+        android:textColor="@color/text_color_tv1"
+        android:textColorHint="@color/text_color_tv2"
+        android:textSize="@dimen/grid_14">
+    </EditText>
+
+    <EditText
+        android:id="@+id/ed_sign"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_40"
+        android:layout_marginLeft="@dimen/grid_20"
+        android:layout_marginRight="@dimen/grid_20"
+        android:background="@drawable/corner_gray"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="请输入个性签名"
+        android:maxLength="50"
+        android:paddingLeft="10dp"
+        android:paddingRight="@dimen/grid_10"
+        android:singleLine="true"
+        android:textColor="@color/text_color_tv1"
+        android:textColorHint="@color/text_color_tv3"
+        android:textSize="@dimen/grid_14">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/grid_10"
+        android:layout_marginTop="@dimen/grid_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="@dimen/grid_90"
+            android:layout_height="@dimen/grid_35"
+            android:gravity="center"
+            android:padding="@dimen/grid_5"
+            android:text="确定"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/grid_16"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="@dimen/grid_30"
+            android:background="@color/text_color_tv3"/>
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/grid_90"
+            android:layout_height="@dimen/grid_35"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/grid_16"/>
+    </LinearLayout>
+</LinearLayout>

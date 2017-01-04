@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ping.Lib.widgets.recyclerrefreshlayout.RecyclerRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ping.Lib.widgets.recyclerrefreshlayout.RecyclerRefreshLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_buttom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="@dimen/grid_5"-->
+        <!--android:background="@color/white">-->
+
+        <!--<ProgressBar-->
+            <!--android:id="@+id/progress_bar"-->
+            <!--style="?android:attr/progressBarStyleSmall"-->
+            <!--android:layout_width="@dimen/grid_20"-->
+            <!--android:layout_height="@dimen/grid_20"-->
+            <!--android:indeterminate="true"-->
+            <!--android:indeterminateDrawable="@drawable/load_more"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="加载中..."-->
+            <!--android:layout_marginLeft="@dimen/grid_5"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@+id/progress_bar"/>-->
+    <!--</RelativeLayout>-->
+
+</FrameLayout>

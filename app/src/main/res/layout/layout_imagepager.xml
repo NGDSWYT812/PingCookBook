@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ping.Lib.widgets.photoview.PhotoView
+        android:id="@+id/pv_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"/>
+    <TextView
+        android:id="@+id/pv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:lineSpacingExtra="@dimen/grid_5"
+        android:padding="@dimen/grid_10"
+        android:textSize="@dimen/grid_15"
+        android:layout_marginBottom="@dimen/grid_30"
+        android:text="美食当前，总能有所思，或馋性千娇，食前观察、吃中思想、品后体味！"
+        android:textColor="@color/white"/>
+</RelativeLayout>

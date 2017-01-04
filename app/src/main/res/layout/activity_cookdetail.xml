@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ping.cookbook.widgets.MyScrollView
+        android:id="@+id/sv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/grid_225"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_default"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/grid_10"
+                android:text="New Text"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_22"/>
+            <TextView
+                android:id="@+id/tv_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/grid_3"
+                android:text="New Text"
+                android:layout_marginLeft="@dimen/grid_20"
+                android:layout_marginRight="@dimen/grid_20"
+                android:layout_marginBottom="@dimen/grid_20"
+                android:textColor="@color/text_color_tv1"
+                android:textSize="@dimen/grid_15"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_notification"
+                android:drawablePadding="@dimen/grid_5"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/grid_5"
+                android:layout_marginLeft="@dimen/grid_10"
+                android:layout_marginRight="@dimen/grid_10"
+                android:text="标签"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_18"/>
+
+            <ping.Lib.widgets.flowLayout.TagCloudLayout
+                android:id="@+id/tv_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_7"
+                android:layout_marginLeft="@dimen/grid_20"
+                android:layout_marginRight="@dimen/grid_20"
+                app:lineSpacing="10dp"
+                app:tagSpacing="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_25"
+                android:drawableLeft="@drawable/icon_notification"
+                android:drawablePadding="@dimen/grid_5"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/grid_10"
+                android:layout_marginRight="@dimen/grid_10"
+                android:text="食材"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_18"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/grid_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tv_ingredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/grid_5"
+                    android:textColor="@color/text_color_tv1"
+                    android:textSize="@dimen/grid_17"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tv_ingredients1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/grid_5"
+                    android:textColor="@color/text_color_tv1"
+                    android:textSize="@dimen/grid_17"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_20"
+                android:drawableLeft="@drawable/icon_notification"
+                android:drawablePadding="@dimen/grid_5"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/grid_10"
+                android:layout_marginRight="@dimen/grid_10"
+                android:text="步骤"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_18"/>
+
+            <ping.Lib.widgets.CJListView
+                android:id="@+id/cjl_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_7"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@color/transparent"
+                android:layout_marginLeft="@dimen/grid_10"
+                android:layout_marginRight="@dimen/grid_10"
+                android:dividerHeight="0dp"
+                android:listSelector="@color/transparent"/>
+        </LinearLayout>
+    </com.ping.cookbook.widgets.MyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_45"
+        android:background="#22ffffff">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/grid_45"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back1"/>
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_like"
+            android:layout_toRightOf="@+id/iv_back"
+            android:gravity="center"
+            android:textColor="@color/text_color_tv0"
+            android:textSize="@dimen/grid_18"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="@dimen/grid_45"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_nolike"/>
+    </RelativeLayout>
+</RelativeLayout>

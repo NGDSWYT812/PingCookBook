@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tag_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_tag"
+        android:gravity="center"
+        android:minHeight="@dimen/grid_25"
+        android:minWidth="@dimen/grid_30"
+        android:paddingLeft="@dimen/grid_10"
+        android:paddingRight="@dimen/grid_10"
+        android:text="标签"
+        android:textColor="@color/white"
+        android:textSize="@dimen/grid_13">
+</Button>

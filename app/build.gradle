@@ -1,0 +1,165 @@
+apply plugin: 'com.android.application'
+def packageTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    sourceSets {
+        development.setRoot('build-types/Development')
+        baidu.setRoot('build-types/Baidu')
+        m360.setRoot('build-types/M360')
+        tencent.setRoot('build-types/Tencent')
+        wandoujia.setRoot('build-types/Wandoujia')
+        xiaomi.setRoot('build-types/Xiaomi')
+        huawei.setRoot('build-types/Huawei')
+        lenove.setRoot('build-types/Lenove')
+        googleplay.setRoot('build-types/Googleplay')
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'LICENSE.txt'
+        exclude 'org/apache/http/version.properties'
+        exclude 'org/apache/http/entity/mime/version.properties'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file('pingword.jks')
+            storePassword '123321123'
+            keyAlias 'ping'
+            keyPassword '123321123'
+        }
+        release {
+            storeFile file('pingword.jks')
+            storePassword '123321123'
+            keyAlias 'ping'
+            keyPassword '123321123'
+        }
+    }
+    defaultConfig {
+        applicationId "com.ping.cookbook"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 5
+        versionName "4.2"
+        signingConfig signingConfigs.debug
+        manifestPlaceholders = [channelName: "development"]
+        testHandleProfiling true
+        testFunctionalTest true
+        multiDexEnabled true
+        multiDexKeepProguard file('multiDexKeep.pro') // keep specific classes using proguard syntax
+        multiDexKeepFile file('multiDexKeep.txt') // keep specific classes
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+        }
+    }
+    //渠道
+    productFlavors {
+        development {}// 开发版
+        baidu {}
+        m360 {}
+        tencent {}
+        wandoujia {}
+        xiaomi {}
+    }
+
+    productFlavors.all {
+        flavor ->
+            if (name.equals("development"))
+                flavor.manifestPlaceholders = [umAppKey   : "57e4e9e2e0f55a48bc000d6d",
+                                               channelName: name]
+            else
+                flavor.manifestPlaceholders = [umAppKey   : "57e4e9e2e0f55a48bc000d6d",
+                                               channelName: name]
+    }
+
+    variantFilter { variant ->
+        def buildType = variant.buildType.name
+        def flavorName = variant.getFlavors().get(0).name
+        // 根据构建类型，自动过滤渠道
+        if (buildType.equals('debug')) {
+            if (flavorName.equals('development')) {
+                variant.setIgnore(false)
+            } else {
+                variant.setIgnore(true)
+            }
+        } else {
+            if (flavorName.equals('development')) {
+                variant.setIgnore(true)
+            } else {
+                variant.setIgnore(false)
+            }
+        }
+    }
+
+    //修改生成的最终文件名
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName
+                if (variant.buildType.name.equals('release')) {
+                    fileName = outputFile.name.replace(".apk", "_v${defaultConfig.versionName}.apk")
+                    output.outputFile = file("${outputFile.parent}/release/${fileName}")
+                } else {
+                    fileName = outputFile.name.replace(".apk", "_v${defaultConfig.versionName}_beta.apk")
+                    output.outputFile = file("${outputFile.parent}/debug/${fileName}")
+                }
+            }
+        }
+
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        abortOnError false
+        ignoreWarnings true
+        warningsAsErrors false
+    }
+
+    dexOptions {
+        incremental true
+        preDexLibraries = false
+        javaMaxHeapSize "1536M"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'org.simple:androideventbus:1.0.5.1'
+    compile project(':libary_umshare')
+    compile project(':Lib')
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    compile files('libs/GDTUnionSDK.4.9.536.min.jar')
+}

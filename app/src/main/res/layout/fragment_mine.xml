@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grid_180"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mine_top"/>
+
+    <ping.Lib.widgets.RoundedImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/grid_110"
+        android:layout_height="@dimen/grid_110"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher"
+        app:sriv_border_color="@color/white"
+        app:sriv_border_width="@dimen/grid_2"
+        app:sriv_oval="true"/>
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/grid_20"
+        android:layout_marginRight="@dimen/grid_20"
+        android:layout_marginTop="@dimen/grid_10"
+        android:singleLine="true"
+        android:text="快手菜.游客"
+        android:textColor="@color/text_color_tv0"
+        android:textSize="@dimen/grid_16"/>
+
+    <TextView
+        android:id="@+id/tv_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nickname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/grid_20"
+        android:layout_marginRight="@dimen/grid_20"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/grid_7"
+        android:lineSpacingExtra="@dimen/grid_3"
+        android:text="爱，就是在一起，吃好多好多顿饭!"
+        android:textColor="@color/text_color_tv1"
+        android:textSize="@dimen/grid_14"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_sign"
+        android:paddingTop="@dimen/grid_10"
+        android:paddingBottom="@dimen/grid_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_mycollect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_image"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/grid_5"
+                android:drawableTop="@drawable/icon_mylike"
+                android:gravity="center"
+                android:text="我的收藏"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_16"/>
+
+            <TextView
+                android:id="@+id/tv_myfb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_image"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/grid_5"
+                android:drawableTop="@drawable/icon_myfb"
+                android:gravity="center"
+                android:text="反馈"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_16"/>
+
+            <TextView
+                android:id="@+id/tv_myapp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_image"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/grid_5"
+                android:drawableTop="@drawable/icon_mytj"
+                android:gravity="center"
+                android:text="推荐应用"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_16"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_myclear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_image"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/grid_5"
+                android:drawableTop="@drawable/icon_myclear"
+                android:gravity="center"
+                android:text="清除缓存"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_16"/>
+
+            <TextView
+                android:id="@+id/tv_myabout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_image"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/grid_5"
+                android:drawableTop="@drawable/icon_myabout"
+                android:gravity="center"
+                android:text="关于"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_16"/>
+
+            <TextView
+                android:id="@+id/tv_myexit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_image"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/grid_5"
+                android:drawableTop="@drawable/icon_myedit"
+                android:gravity="center"
+                android:text="退出"
+                android:textColor="@color/text_color_tv0"
+                android:textSize="@dimen/grid_16"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_clear"
+        android:layout_width="@dimen/grid_100"
+        android:layout_height="@dimen/grid_100"
+        android:background="@drawable/bg_loading"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleSmall"
+            android:indeterminateDrawable="@drawable/progress_clear"
+            android:layout_width="@dimen/grid_40"
+            android:layout_height="@dimen/grid_40" />
+
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_width="@dimen/grid_80"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_10"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="清理中"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/grid_15" />
+    </LinearLayout>
+</RelativeLayout>

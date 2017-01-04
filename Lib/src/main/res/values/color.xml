@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="translucent">#99000000</color><!-- 半透明 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="swap_holo_green_bright">#48B94A</color>
+    <color name="swap_holo_bule_bright">#4996e5</color>
+    <color name="swap_holo_pure_bright">#d066b1</color>
+</resources>
